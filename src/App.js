@@ -16,7 +16,7 @@ function App() {
   // ======================================================================
   // ======================================================================
   // ============== Getting =================
-  // Getting the data from the below URL of "https://product-admin-page-mern.herokuapp.com/get" and save in the hook of setComingData as an array
+  // Getting the data from the below URL of "https://product-admin-page-mern.herokuapp.com" and save in the hook of setComingData as an array
   const onGetting = () => {
     Axios.get("https://product-admin-page-mern.herokuapp.com/get").then((response) =>
       setComingData(response.data)

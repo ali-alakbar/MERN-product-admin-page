@@ -159,8 +159,14 @@ button:hover {
   border-bottom: 1px solid #afafaf;
 }
 
+.landing-section table tr td {
+  font-style: 14px;
+  font-weight: 100;
+}
+
 .landing-section table tr td:first-child {
   font-weight: bold;
+  font-size: 16px;
 }
 
 .landing-section table tr td,

@@ -56,6 +56,7 @@ const Body = (props) => {
           <input
             onChange={(e) => props.setNewText(e.target.value)}
             placeholder="text"
+            className="newFormInput"
             type="text"
           />
         </td>
@@ -63,6 +64,7 @@ const Body = (props) => {
           <input
             onChange={(e) => props.setNewDesc(e.target.value)}
             placeholder="description"
+            className="newFormInput"
             type="text"
           />
         </td>
@@ -70,6 +72,7 @@ const Body = (props) => {
           <input
             onChange={(e) => props.setNewPrice(e.target.value)}
             placeholder="price"
+            className="newFormInput"
             type="number"
           />
         </td>
@@ -78,20 +81,31 @@ const Body = (props) => {
             onChange={(e) => props.setNewType(e.target.value)}
             placeholder="category"
             type="text"
+            className="newFormInput"
           />
         </td>
         <td>
           <button
             onClick={() => {
-              props.onUpdate(
-                item._id,
-                item.text,
-                item.desc,
-                item.price,
-                item.type
+              const newFormInputs = Array.from(
+                document.querySelectorAll(".newFormInput")
               );
-              onEdit({ id: id });
-              onClose();
+              for (let i = 0; i < newFormInputs.length; i++) {
+                if (newFormInputs[i].value.trim().length !== 0) {
+                  alert("Fill the fields please.");
+                  break;
+                } else {
+                  props.onUpdate(
+                    item._id,
+                    item.text,
+                    item.desc,
+                    item.price,
+                    item.type
+                  );
+                  onEdit({ id: id });
+                  onClose();
+                }
+              }
             }}
           >
             Send
