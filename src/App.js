@@ -16,9 +16,9 @@ function App() {
   // ======================================================================
   // ======================================================================
   // ============== Getting =================
-  // Getting the data from the below URL of "http://localhost:3001/get" and save in the hook of setComingData as an array
+  // Getting the data from the below URL of "https://product-admin-page-mern.herokuapp.com/get" and save in the hook of setComingData as an array
   const onGetting = () => {
-    Axios.get("http://localhost:3001/get").then((response) =>
+    Axios.get("https://product-admin-page-mern.herokuapp.com/get").then((response) =>
       setComingData(response.data)
     );
   };
@@ -32,7 +32,7 @@ function App() {
   // ============== Adding =================
   // Getting the data from the hooks above and send them to index.js
   const onAdding = () => {
-    Axios.post("http://localhost:3001/add", {
+    Axios.post("https://product-admin-page-mern.herokuapp.com/add", {
       text: Text,
       desc: Desc,
       price: Price,
@@ -48,7 +48,7 @@ function App() {
   // Detecing the item we want to remove by getting the box's ID (backend ID) and send it to the server.js
   // The data will come out again to be displayed by calling "onGetting()" function.
   const onUpdate = (paraID) => {
-    Axios.post("http://localhost:3001/update", {
+    Axios.post("https://product-admin-page-mern.herokuapp.com/update", {
       id: paraID,
       text: newText,
       desc: newDesc,
@@ -63,7 +63,7 @@ function App() {
   // Getting the ID of the elements by making the below function of onRemove() as a props to > [ <Body/> ] > [ <InputFields/> ]
   // Send this ID to > [ api ] > [ index.js ]
   const onRemove = (paraID) => {
-    Axios.post("http://localhost:3001/remove", {
+    Axios.post("https://product-admin-page-mern.herokuapp.com/remove", {
       id: paraID,
     }).then(() => onGetting());
   };
