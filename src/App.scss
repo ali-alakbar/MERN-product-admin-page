@@ -1,4 +1,5 @@
 /* Start Screen Responsive */
+
 /* Small Screens */
 @media (min-width: 768px) {
   .container {
@@ -21,11 +22,13 @@
 }
 
 /* End Screen Responsive */
+
 .container {
   padding: 0;
   margin: 0 auto;
 }
 
+// ======== Start Global Rules ==========
 * {
   padding: 0%;
   margin: 0;
@@ -45,7 +48,6 @@ input,
 textarea {
   outline: none;
 }
-
 h1 {
   font-weight: 800;
 }
@@ -57,12 +59,9 @@ button {
   padding: 20px 0;
   cursor: pointer;
   background-color: #26a29a;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
 }
-
-button:hover {
-  background-color: #fff;
-  color: #000;
-}
-/*# sourceMappingURL=App.css.map */

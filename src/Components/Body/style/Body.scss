@@ -1,0 +1,99 @@
+@import "../../../App";
+
+.landing-section {
+  width: 100%;
+  padding-top: 3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  .intro-content {
+    margin-bottom: 2rem;
+    h1 {
+      color: #1e1d23;
+      font-size: 52px;
+      padding: 0 15px;
+      text-transform: capitalize;
+    }
+    p {
+      color: #999;
+      font-weight: 500;
+      margin-right: 0.5em;
+    }
+  }
+  .adding-bar {
+    margin-bottom: 5rem;
+    .inputs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      div {
+        width: 30vw;
+        margin-bottom: 2rem;
+      }
+      label {
+        display: inline-block;
+        font-weight: 100;
+      }
+      input {
+        background-color: #fbf7e8;
+        border: 1px solid #fbf7e8;
+        color: #999;
+        font-size: 14px;
+        font-weight: 500;
+        height: 100%;
+        width: 100%;
+        padding: 0.5em;
+      }
+    }
+    button {
+      width: 15vw;
+      height: 7vh;
+      padding: 0;
+    }
+  }
+  table {
+    display: block;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: solid 1px #afafaf;
+    box-shadow: 0px 3px 20px -3px;
+    tr {
+      border-bottom: 1px solid #afafaf;
+      td,
+      th {
+        padding: 10px 5px;
+        width: 65vw;
+
+        .deleting {
+          background-color: #ff4e56;
+          border-color: #ff4e56;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    .newForm {
+      td,
+      th {
+        input {
+          border: 1px solid #2f2e2e33;
+          border-radius: 10px;
+          width: 100%;
+          padding: 10px 5px;
+        }
+        button {
+          background-color: #4169e2;
+          border-color: #4169e2;
+          &:hover {
+            background-color: #4169e2;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
