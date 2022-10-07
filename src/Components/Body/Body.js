@@ -18,7 +18,7 @@ const Body = (props) => {
         <td>{id}</td>
         <td>{item.itemName}</td>
         <td>{item.desc}</td>
-        <td>{item.price}$</td>
+        <td>${item.price}</td>
         <td>{item.type}</td>
         <td>
           <button
